@@ -169,11 +169,11 @@ This will generate:
 Start the FastAPI server:
 
 Available endpoints:
-
+```
 -GET /health
 -GET /metadata
 -POST /predict
-
+```
 ---
 
 Tech Stack
