@@ -1,0 +1,28 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  local_data_file: data/raw/creditcard.csv
+
+data_validation:
+  schema_file: configs/schema.yaml
+  status_file: artifacts/data_validation/status.txt
+
+data_transformation:
+  preprocessor_object_file_path: artifacts/data_transformation/preprocessor.pkl
+  train_path: artifacts/data_transformation/train.csv
+  test_path: artifacts/data_transformation/test.csv
+  transformed_train_path: artifacts/data_transformation/train_transformed.csv
+  transformed_test_path: artifacts/data_transformation/test_transformed.csv
+
+model_trainer:
+  trained_model_file_path: artifacts/model_trainer/model.pkl
+  model_report_file_path: artifacts/model_trainer/model_report.yaml
+  threshold_report_file_path: artifacts/model_trainer/threshold_report.yaml
+  evaluation_report_file_path: artifacts/model_trainer/evaluation_report.yaml
+
+mlflow:
+  experiment_name: fraud_detection_experiments
+  tracking_uri: file:./mlruns
+
+monitoring:
+  drift_report_json_path: artifacts/monitoring/drift_report.json

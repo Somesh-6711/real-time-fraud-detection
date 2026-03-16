@@ -1,0 +1,28 @@
+classification_report:
+  '0':
+    f1-score: 0.9997802023896396
+    precision: 0.9996659458128945
+    recall: 0.9998944850872257
+    support: 56864.0
+  '1':
+    f1-score: 0.8633879781420765
+    precision: 0.9294117647058824
+    recall: 0.8061224489795918
+    support: 98.0
+  accuracy: 0.9995611109160493
+  macro avg:
+    f1-score: 0.9315840902658581
+    precision: 0.9645388552593884
+    recall: 0.9030084670334088
+    support: 56962.0
+  weighted avg:
+    f1-score: 0.9995455470408762
+    precision: 0.9995450773435907
+    recall: 0.9995611109160493
+    support: 56962.0
+confusion_matrix:
+- - 56858
+  - 6
+- - 19
+  - 79
+threshold_used: 0.9000000000000002

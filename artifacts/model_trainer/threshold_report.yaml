@@ -1,0 +1,4 @@
+best_f1_score: 0.8633879781420765
+best_threshold: 0.9000000000000002
+precision_at_best_threshold: 0.9294117647058824
+recall_at_best_threshold: 0.8061224489795918
