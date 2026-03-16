@@ -192,10 +192,6 @@ Pydantic
 📷 Screenshots
 
 <p align="center">
-  <img src="images/Screenshot 2025-12-29 025133.png"
-    >
-</p>
-<p align="center">
   <img src="images/Screenshot 2026-03-16 145320.png"
     >
 </p>
