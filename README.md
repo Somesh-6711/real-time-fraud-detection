@@ -39,7 +39,7 @@ Class (0 = Normal Transaction, 1 = Fraud)
 ---
 
 # System Architecture
-
+```
 Raw Data
 │
 ├── Data Ingestion
@@ -66,7 +66,7 @@ Raw Data
 │ └── evaluation reports
 │
 └── FastAPI Inference Service
-
+```
 
 ---
 
@@ -105,7 +105,7 @@ Confusion Matrix (Test Set)
 ---
 
 # Project Structure
-
+```
 real-time-fraud-detection/
 │
 ├── app/ # FastAPI service
@@ -141,7 +141,7 @@ real-time-fraud-detection/
 ├── Dockerfile
 ├── requirements.txt
 ├── run_train
-
+```
 
 
 ---
