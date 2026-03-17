@@ -188,6 +188,97 @@ Pandas
 NumPy
 Pydantic
 
+---
+
+## MLflow Experiment Tracking
+
+The training pipeline uses **MLflow** to track model experiments, parameters, metrics, and artifacts across multiple fraud detection models.
+
+### What is tracked
+- Model name
+- Hyperparameters
+- Evaluation metrics:
+  - ROC-AUC
+  - PR-AUC
+  - Precision
+  - Recall
+  - F1-score
+- Serialized model artifacts
+
+### Why it matters
+MLflow improves reproducibility and makes it easier to compare different models and training runs in a production-style workflow.
+
+### Run training with MLflow logging
+```
+python run_training.py
+```
+
+Launch mlflow ui
+```
+mlflow ui
+```
+then open
+```
+http://127.0.0.1:5000
+```
+Example use in this project
+
+The system logs experiments for:
+
+Logistic Regression
+
+Random Forest
+
+XGBoost
+
+LightGBM
+
+The best model is selected based on PR-AUC, which is more appropriate than accuracy for highly imbalanced fraud detection.
+
+---
+
+Data Drift Monitoring
+
+The project includes data drift monitoring using Evidently to compare reference data and current data distributions.
+
+What is monitored
+
+Distribution changes across all numerical input features
+
+Dataset-level drift summary
+
+Per-feature drift detection scores
+
+Why it matters
+
+In production ML systems, model performance can degrade when incoming data changes over time.
+Drift monitoring helps detect these changes early and supports more reliable model behavior in deployment.
+
+Run drift monitoring
+```
+python run_drift_monitoring.py
+```
+
+Output
+
+The drift analysis is saved as:
+```
+artifacts/monitoring/drift_report.json
+```
+Baseline result in this project
+
+The initial drift report compared training and test distributions and found:
+
+33 columns checked
+
+0 drifted columns
+
+dataset_drift = false
+
+This indicates no significant distribution shift in the baseline evaluation split.
+
+----
+
 
 📷 Screenshots
 
